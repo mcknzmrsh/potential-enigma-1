@@ -11,19 +11,21 @@ inquirer
         {
         type: "input",
         message: "What is the title of this project?",
-        name: "why"
-
+        name: "project"
+    
+    
         },
         {
         type: "input",
         message: "Why did you build this project?",
-        name: "why"
-
+        name: "build"
+          
         },
         {
         type: "input",
         message:"What problem  does this solve?",
         name: "problem"
+         
         },
 
         {
@@ -52,7 +54,7 @@ inquirer
         name: "license",
     
         }
-    ])then(data) => {
+     )then (data)  {
         console.log(data);
         fs.writeFile('README.md', generateMarkdown(data)),
         error => {
@@ -62,11 +64,12 @@ inquirer
             console.log('Your README was generated')
         }
     }
-// Project Name
+    function init() {
+        inquirer.prompt(questions)
+        .then(function (userInput) {
+            console.log(userInput)
+            writeToFile("README.md" , generateMarkdown(userInput));
 
-// TODO: Create a function to write README file
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+        });
+    };
+    init();
