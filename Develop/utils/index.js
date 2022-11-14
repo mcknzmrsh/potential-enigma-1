@@ -2,7 +2,6 @@ const { default: inquirer } = require("inquirer");
 const fs = require ('fs');
 const genterateMarkdown = require('./utils/generateMarkdown');
 const { validateHeaderName } = require("http");
-const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Include packages needed for this application
 
 // TODO: Create an array of questions for user input
@@ -40,7 +39,7 @@ inquirer
         type:"input",
         message: "List all contributors",
         name: "contribitors"
-        },
+        }
         {
         type: "input",
         message: "Add your github so others can ask questions",
@@ -52,16 +51,7 @@ inquirer
         name: "license",
     
         }
-    ])then(data) => {
-        console.log(data);
-        fs.writeFile('README.md', generateMarkdown(data)),
-        error => {
-            if (error) {
-                console.log('Please input all data')
-            }
-            console.log('Your README was generated')
-        }
-    }
+    ])
 // Project Name
 
 // TODO: Create a function to write README file
