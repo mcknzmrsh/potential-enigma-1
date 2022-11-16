@@ -36,4 +36,4 @@ function generateMarkdown(data) {
   - Email: ${data.email} `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown; 
