@@ -18,13 +18,13 @@ const questions = [
             
         }
        
-        {
+        
     },
 
-        type: "input",
-        message: "Why did you build this project?",
-        name: "build",
-        validate: buildInput => {
+        type, "input",
+        message, "Why did you build this project?",
+        name, "build",
+        validate, buildInput => {
           if (buildInput) {
         return true;
           } else {
@@ -59,12 +59,13 @@ const questions = [
             console.log("What did you learn?")
             return false;
         }
+    }
         },
         
-        type: "input",
-        message: "How can you install this application?",
-        name: "install",
-        validate: installInput => {
+        type, "input",
+        message, "How can you install this application?",
+        name, "install",
+        validate, installInput => {
         if (installInput) {
             return true;
         } else {
@@ -73,10 +74,10 @@ const questions = [
         }
         },
         
-        type:"input",
-        message: "List all contributors",
-        name: "contribitors",
-        validate: contributorsInput => {
+        type,"input",
+        message, "List all contributors",
+        name, "contribitors",
+        validate, contributorsInput => {
         if (contributorsInput) {
             return true;
         } else {
@@ -87,20 +88,21 @@ const questions = [
         },
         
         
-        type: "input",
-        message: "Add your github so others can ask questions",
-        name: "github",
-        validate: githubInput => {
+        type, "input",
+        message, "Add your github so others can ask questions",
+        name, "github",
+        validate, githubInput => {
         if (githubInput) {
             return true;
         } else {
             console.log('Enter your github to continue');
+        }
         },
         
-        type: "input",
-        message: "Choose a license",
-        name: "license",
-        validate: licenseImput => {
+        type, "input",
+        message, "Choose a license",
+        name, "license",
+        validate, licenseImput => {
         if (licenseInput) {
             return true;
         } else {
