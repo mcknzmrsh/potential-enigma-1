@@ -56,7 +56,7 @@ const questions = [
         if (learnInput) {
             return true;
         } else {
-            console.log("What did you learn?")
+            console.log("What did you learn from this project?")
             return false;
         }
     }
@@ -69,7 +69,7 @@ const questions = [
         if (installInput) {
             return true;
         } else {
-            console.log('How can you install this application?');
+            console.log('You must explain how to install this application to continue!');
             return false;
         }
         },
@@ -81,7 +81,7 @@ const questions = [
         if (contributorsInput) {
             return true;
         } else {
-            console.log('List all contributors');
+            console.log('List all contributors to continue');
             return false;
         }
 
@@ -106,14 +106,14 @@ const questions = [
         if (licenseInput) {
             return true;
         } else {
-            console.log('Choose a license for the README');
+            console.log(' You must choose a license for the README');
         }
     
         }
         ] 
         
         function writeToFile(fileName, data)  
-        fs.writeFile('fileName', data, (err)),
+        fs.fileName('fileName', data, (err)),
         error => {
             if (err) {
                 throw err;
